@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name pulsar.library)(type Legacy)(uri ${KIPRJMOD}/pulsar.library.lib)(options "")(descr ""))
+  (lib (name pulsar_logo)(type Legacy)(uri /Users/mackee/Documents/pulsar/pulsar/pulsar_logo.lib)(options "")(descr ""))
+)

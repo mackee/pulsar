@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name pulsar)(type KiCad)(uri /Users/mackee/Documents/pulsar/pulsar/pulsar.pretty)(options "")(descr ""))
+  (lib (name WS2812-2020)(type KiCad)(uri /Users/mackee/Downloads/WS2812-2020)(options "")(descr ""))
+)
