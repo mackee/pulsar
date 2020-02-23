@@ -11,24 +11,24 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 1871)
+    (start_pass_no 6472)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 3.0)
+      (against_preferred_direction_trace_costs 2.3)
     )
     (layer_rule B.Cu
       (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.5)
+      (against_preferred_direction_trace_costs 1.8)
     )
   )
   (rule
-    (width 250.0)
+    (width 200.0)
     (clear 200.2)
-    (clear 125.0 (type smd_to_turn_gap))
+    (clear 100.0 (type smd_to_turn_gap))
     (clear 50.0 (type smd_smd))
   )
   (padstack "Via[0-1]_800:400_um"
@@ -62,33 +62,34 @@
     (clearance_class default)
     (via_rule default)
     (rule
-      (width 250.0)
+      (width 200.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
     )
   )
   (class "kicad_default"
-    col1 "Net-(D1-Pad2)" col2 "Net-(D2-Pad2)" col3 "Net-(D3-Pad2)" "Net-(D4-Pad2)" "Net-(D5-Pad2)"
-    "Net-(D6-Pad2)" "Net-(D7-Pad2)" "Net-(D8-Pad2)" "Net-(D9-Pad2)" row1 row2 row3 rotB
-    rotA "Net-(SW1-Pad1)" SDA SCL lev1 lev2 levT lev3
-    lev4 LEDD "Net-(D10-Pad2)" "Net-(D11-Pad2)" "Net-(D12-Pad2)" "Net-(D13-Pad2)" "Net-(D14-Pad2)" "Net-(D15-Pad2)"
-    "Net-(D16-Pad2)" "Net-(D17-Pad2)"
+    "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D7-Pad2)" "Net-(D8-Pad2)"
+    rotB rotA GND lev1 lev2 levT lev3 lev4
+    LEDD "Net-(D10-Pad2)" "Net-(D10-Pad4)" sw1 sw6 sw2 sw7 sw3
+    sw8 sw4 sw9 sw5 sw10 sw11 "USB_D-" "USB_D+"
+    "Net-(C13-Pad1)" SWCLK SWDIO NRST BOOT0 GNDD +5V LEDDO
+    "Net-(J4-PadA5)" "Net-(J4-PadA7)" "Net-(J4-PadB5)" "Net-(J4-PadA6)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
-      (width 250.0)
+      (width 200.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
     )
   )
   (class Power
-    VCC GND
+    VCC
     (clearance_class Power)
     (via_rule Power)
     (rule
-      (width 500.0)
+      (width 200.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
