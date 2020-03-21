@@ -145,9 +145,15 @@ Pulsar基板本体をメイン基板とボトムプレートに分割します�
 
 これで完成です！ お疲れさまでした。
 
-## ファームウェアの書き込み方
+## デフォルトキーマップ
 
-## キーマップ変更
+![](https://github.com/mackee/pulsar/blob/master/docs/img/keymap1.jpg)
+
+レバースイッチ押し込みを続けるとLED/RESETレイヤーに入ります。
+
+![](https://github.com/mackee/pulsar/blob/master/docs/img/keymap2.jpg)
+
+## キーマップ変更方法
 
 **NOTICE: 本家qmk_firmwareへPull Request予定です。マージされたあとに手順が変わります**
 
@@ -185,9 +191,11 @@ $ git checkout pulsar
 $ make pulsar/rev2:default:dfu-util
 ```
 
-`Detecting USB port, reset your controller now...` と表示されたら、右下レバースイッチを押し込みながら、一番右上のキーを押します。すると、書き込みが開始されます。
+`ERROR: Bootloader not found. Trying again in 5s.` と表示されたら、右下レバースイッチを押し込みながら、一番右上のキーを押します。すると、書き込みが開始されます。
 
-`avrdude done.  Thank you.` と表示されたら成功です。
+![](https://github.com/mackee/pulsar/blob/master/docs/img/flash.jpg)
+
+`Transitioning to dfuMANIFEST state` と表示されたら成功です。
 
 ### 3. キー配置を変更する
 
