@@ -163,7 +163,7 @@ qmk configuratorは現在ロータリーエンコーダに対応していない�
 
 [はじめに - QMK Firmware](https://docs.qmk.fm/#/ja/newbs_getting_started)
 
-参考: Windowsユーザ向け [プログラマーではない人向けのQMK Firmware入門](https://qiita.com/cactusman/items/ac41993d1682c6d8a12e)
+参考: [QMK 環境の構築](https://github.com/qmk/qmk_firmware/blob/master/docs/ja/newbs_getting_started.md)
 
 ### 1. `pulsar` ブランチを指定して `github.com/mackee/qmk_firmware`をcloneします。
 
@@ -189,6 +189,7 @@ $ git checkout pulsar
 
 ```console
 $ make pulsar/rev2:default:dfu-util
+$ qmk flash -kb pulsar/rev2 -km default
 ```
 
 `ERROR: Bootloader not found. Trying again in 5s.` と表示されたら、右下レバースイッチを押し込みながら、一番右上のキーを押します。すると、書き込みが開始されます。
@@ -232,7 +233,7 @@ $ cp -R keyboard/pulsar/rev2/keymaps/default keyboard/pulsar/rev2/keymaps/mykeym
 保存後にキーボードにキーマップを書き込むには、 2と同様の手順で、以下のコマンドを実行します。
 
 ```console
-$ make pulsar/rev2:mykeymap:dfu-util
+$ qmk flash -kb pulsar/rev2 -km mykeymap
 ```
 
 ### 4. ロータリーエンコーダの挙動を変更する
